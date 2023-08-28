@@ -1,4 +1,6 @@
-Esse código HTML define uma página web simples com um cabeçalho, uma barra de navegação, uma seção de conteúdo vazia e um rodapé. Além disso, há um trecho de código JavaScript embutido na página que tem uma função prática específica. Vou explicar o que esse código faz na prática:
+Esse código HTML define uma página web simples com um cabeçalho, uma barra de navegação, uma seção de conteúdo vazia e um rodapé. Além disso, há um trecho de código JavaScript embutido na página que tem uma função prática específica. 
+
+Vou explicar o que esse código faz na prática:
 
 1. **Estrutura HTML**: O código HTML cria uma estrutura básica de página web, com um cabeçalho, barra de navegação, seção de conteúdo e rodapé.
 
@@ -12,4 +14,4 @@ Esse código HTML define uma página web simples com um cabeçalho, uma barra de
 
 6. **Atualização do Conteúdo da Seção**: A próxima linha `.then(resp => resp.text())` processa a resposta do servidor (HTML) como texto. Então, a linha `.then(html => CONTEUDO.innerHTML = html)` substitui o conteúdo da seção vazia com o conteúdo HTML obtido da requisição.
 
-Em resumo, quando você clica em um link na barra de navegação, o JavaScript carrega o conteúdo HTML da página vinculada e atualiza dinamicamente a seção de conteúdo sem recarregar toda a página. Isso permite criar uma experiência de navegação suave, pois somente o conteúdo da seção central é alterado, enquanto o cabeçalho e o rodapé permanecem consistentes.
+Quando você clica em um link na barra de navegação, o JavaScript carrega o conteúdo HTML da página vinculada e atualiza dinamicamente a seção de conteúdo sem recarregar toda a página. Isso permite criar uma experiência de navegação suave, pois somente o conteúdo da seção central é alterado, enquanto o cabeçalho e o rodapé permanecem consistentes.
