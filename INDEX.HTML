@@ -1,34 +1,36 @@
 <HTML><!DOCTYPE html>
-    <html lang="en">
+    <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
         <title>EXERCÍCIOS HTML</title>
     </head>
     <body>
         <header>
-            Exercícios HTML
+            <h1>Exercícios HTML</h1> 
         </header>
         <nav>
-            <a href="ExercícioHTML/TESTE.HTML">00 - teste</a>
+            <a href wm-nav="ExercícioHTML/teste2/teste.html">00 - teste</a>|
+            <a href wm-nav="ExercícioHTML/TESTE.HTML">01 - teste</a>
         </nav>
-        <section id="CONTEUDO"></section>
+        <section id="conteudo"></section>
         <footer>
             <br>
             EXERCÍCIO WEB  
         </footer>
         <script>
-            document.querySelectorAll('a').forEach(link => {
-                const CONTEUDO = document.getElementById('CONTEUDO')
+            document.querySelectorAll('[wm-nav]').forEach(link => {
+                const conteudo = document.getElementById('conteudo')
     
                 link.onclick = function(e) {
-                e.preventDefault()
-                fetch(link.href)
-                .then(resp => resp.text())
-                .then(html => CONTEUDO.innerHTML = html)
+                    e.preventDefault()
+                    fetch(link.getAttribute('wm-nav'))
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
               }
             })
         </script>
     </body>
-    </html></HTML>
+    </html>
     
