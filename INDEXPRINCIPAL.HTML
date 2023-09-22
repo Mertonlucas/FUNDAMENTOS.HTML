@@ -1,44 +1,71 @@
-<HTML><!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="referrer" content="no-referrer">
-        <title>EXERCÍCIOS HTML</title>
-        <style>
-            #conteudo {
-                padding: 30px; 0px;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>EXERCÍCIOS HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Exercícios HTML</h1> 
-        </header>
-        <nav>
-            <a href wm-nav="FETCHS/FETCH1.HTML">00 - FETCH1</a>|
-            <a href wm-nav="FETCHS/FETCH2.HTML">01 - FETCH2</a>
-            <a href wm-nav="LISTAS.HTML">02 - LISTAS</a>
-            <a href wm-nav="LISTAANINHADA.HTML">03 - LISTA ANINHADA</a>
-        </nav>
-        <section id="conteudo"></section>
-        <footer>
-            <br>
-            EXERCÍCIO WEB  
-        </footer>
-        <script>
-            document.querySelectorAll('[wm-nav]').forEach(link => {
-                const conteudo = document.getElementById('conteudo')
-    
-                link.onclick = function(e) {
-                    e.preventDefault()
-                    fetch(link.getAttribute('wm-nav'))
-                        .then(resp => resp.text())
-                        .then(html => conteudo.innerHTML = html)
-              }
-            })
-        </script>
-    </body>
-    </html>
-    
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section#conteudo {
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href="FETCHS/FETCH1.HTML"><i class="icon fas fa-cog"></i> FETCH1</a>
+        <a href="FETCHS/FETCH2.HTML"><i class="icon fas fa-cog"></i> FETCH2</a>
+        <a href="LISTAS.HTML"><i class="icon fas fa-list-ul"></i> LISTAS</a>
+        <a href="LISTAANINHADA.HTML"><i class="icon fas fa-list-ol"></i> LISTA ANINHADA</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        EXERCÍCIO WEB
+    </footer>
+    <script>
+        // Seu código JavaScript continua aqui
+    </script>
+</body>
+</html>

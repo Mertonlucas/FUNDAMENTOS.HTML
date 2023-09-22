@@ -1,48 +1,103 @@
-<h1>Projeto</h1>
-<ul class="tree">
-    <li>
-        <span wm-folder>backend</span>
-        <ul>
-            <li>
-                <span wm-folder>app</span>
-                <ul>
-                    <li>produto.js</li>
-                    <li>usuario.js</li>
-                    <li>venda.js</li>
-                </ul>
-            </li>
-            <li>
-                <span wm-folder>config</span>
-                <ul>
-                    <li>banco.js</li>
-                    <li>rotas.js</li>
-                    <li>servidor.js</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <span wm-folder>frontend</span>
-        <ul>
-            <li>
-                <span wm-folder>public</span>
-                <ul>
-                    <li>app.css</li>
-                    <li>app.js</li>
-                    <li>index.html</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-
-<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
-<script>
-    document.querySelectorAll('[wm-folder]').forEach(folder => {
-        folder.onclick = function(e) {
-            const ul = folder.nextElementSibling
-            const d = ul.style.display
-            ul.style.display = d === 'none' ? 'block' : 'none'
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Aninhada</title>
+    <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
-    })
-</script>
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .tree {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tree li {
+            margin: 10px 0;
+        }
+
+        [wm-folder] {
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        [wm-folder]:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lista Aninhada - Estrutura de Diretórios</h1>
+    </header>
+    <main>
+        <h2>Explorando a Estrutura de Diretórios</h2>
+        <p>Nesta página, você encontrará uma representação visual de uma estrutura de diretórios com pastas e arquivos.</p>
+        <ul class="tree">
+            <li>
+                <span wm-folder>backend</span>
+                <ul>
+                    <li>
+                        <span wm-folder>app</span>
+                        <ul>
+                            <li>produto.js</li>
+                            <li>usuario.js</li>
+                            <li>venda.js</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span wm-folder>config</span>
+                        <ul>
+                            <li>banco.js</li>
+                            <li>rotas.js</li>
+                            <li>servidor.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>frontend</span>
+                <ul>
+                    <li>
+                        <span wm-folder>public</span>
+                        <ul>
+                            <li>app.css</li>
+                            <li>app.js</li>
+                            <li>index.html</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <script>
+        document.querySelectorAll('[wm-folder]').forEach(folder => {
+            folder.onclick = function(e) {
+                const ul = folder.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === 'none' ? 'block' : 'none'
+            }
+        })
+    </script>
+</body>
+</html>

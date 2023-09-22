@@ -1,3 +1,111 @@
-<h1> CABEÇALHO PRINCIPAL</h1>
-<h2> CABEÇALHO SECUNDÁRIO</h2>
-<h3> olá</h3>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Página com Fetch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section#conteudo {
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #333;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Página com Fetch</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0);" id="fetch1Button"><i class="icon fas fa-cog"></i> FETCH1</a>
+        <a href="FETCHS/FETCH2.HTML"><i class="icon fas fa-cog"></i> FETCH2</a>
+    </nav>
+    <section id="conteudo">
+        <h2>Conteúdo Carregado Dinamicamente</h2>
+        <div id="fetch1Content">
+            <!-- O conteúdo carregado do FETCH1 será inserido aqui. -->
+        </div>
+    </section>
+    <footer>
+        <br>
+        EXERCÍCIO WEB
+    </footer>
+    <script>
+        document.getElementById('fetch1Button').addEventListener('click', function() {
+            const fetch1Content = document.getElementById('fetch1Content');
+            
+            // Simule o carregamento do conteúdo do FETCH1 aqui.
+            // Você pode usar a função fetch() para buscar conteúdo de uma fonte externa.
+
+            // Exemplo de uso do fetch:
+            // fetch('URL_DO_SEU_CONTEUDO')
+            //     .then(response => response.text())
+            //     .then(data => {
+            //         fetch1Content.innerHTML = data;
+            //     })
+            //     .catch(error => {
+            //         console.error('Erro ao carregar conteúdo: ' + error);
+            //     });
+
+            // Simule o resultado do fetch (remova isso em sua implementação real):
+            fetch1Content.innerHTML = '<p>Conteúdo carregado do FETCH1 aqui.</p>';
+        });
+    </script>
+</body>
+</html>
