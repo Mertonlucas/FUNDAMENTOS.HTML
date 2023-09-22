@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas e Glossário</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        dl {
+            padding-left: 40px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: 20px;
+            font-style: italic;
+        }
+
+        /* Estilos 3D */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Listas e Glossário</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Aprovados</h2>
+            <ol>
+                <li>Rafaela</li>
+                <li>Lucas</li>
+                <li>Pedro</li>
+                <li>João</li>
+                <li>Maria</li>
+                <li>Maria</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>Lista de Compras</h2>
+            <ul>
+                <li>Feijão</li>
+                <li>Carne</li>
+                <li>Frango</li>
+                <li>Ovos</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Principais Termos do Glossário de Cloud Computing</h2>
+            <dl>
+                <dt>BaaS</dt>
+                <dd>Backend as a Service</dd>
+                <dt>IaaS</dt>
+                <dd>Infrastructure as a Service</dd>
+                <dt>PaaS</dt>
+                <dd>Platform as a Service</dd>
+                <dt>SaaS</dt>
+                <dd>Software as a Service</dd>
+            </dl>
+        </div>
+    </div>
+</body>
+
+</html>
