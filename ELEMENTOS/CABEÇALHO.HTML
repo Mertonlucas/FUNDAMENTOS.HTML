@@ -1,13 +1,85 @@
-<!DOCTYPE html> <!-- Esta declaração define a versão do HTML (HTML5) que estamos usando. -->
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!-- Esta meta tag define o conjunto de caracteres UTF-8 para suportar caracteres especiais. -->
-    <title>Exemplo de Cabeçalho HTML</title> <!-- Esta tag define o título da página exibido na aba do navegador. -->
-    <link rel="stylesheet" type="text/css" href="estilos.css"> <!-- Este link importa um arquivo CSS externo para estilizar a página. -->
+    <!-- Início do cabeçalho da página -->
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres da página como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <title>Minha Página Web</title>
+    <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa um arquivo CSS externo para estilizar a página -->
+    <style>
+        /* Estilos internos (CSS incorporado diretamente na página) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        /* Define estilos para o corpo da página */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        /* Define estilos para o cabeçalho da página */
+        h1 {
+            font-size: 36px;
+        }
+        /* Define estilos para cabeçalho de primeiro nível */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        /* Define estilos para parágrafos de texto */
+        a {
+            text-decoration: none;
+            color: #0078d4;
+        }
+        /* Define estilos para links */
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Define estilos para links quando o mouse está sobre eles */
+    </style>
+    <!-- Fim do cabeçalho da página -->
 </head>
 <body>
-    <h1>Meu Título Principal</h1> <!-- Esta tag define um título principal na página. -->
-    <p>Este é um parágrafo de texto. <!-- Esta tag define um parágrafo de texto. -->
-    <a href="https://www.example.com">Clique aqui</a> <!-- Esta tag cria um link para o site de exemplo. -->
+    <!-- Corpo da página -->
+    <header>
+        <h1>Bem-vindo à Minha Página Web</h1>
+    </header>
+    <!-- Cabeçalho com um título -->
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <!-- Navegação com links -->
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma equipe dedicada a criar soluções incríveis para nossos clientes. Nossa paixão é a inovação e o design.</p>
+    </section>
+    <!-- Seção "Sobre Nós" -->
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Design de Sites</li>
+            <li>Desenvolvimento Web</li>
+            <li>Consultoria em TI</li>
+        </ul>
+    </section>
+    <!-- Seção "Nossos Serviços" -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Estamos ansiosos para ouvir de você. <a href="mailto:contato@example.com">Envie-nos um e-mail</a> ou siga-nos no <a href="https://twitter.com/example" target="_blank">Twitter</a>.</p>
+    </section>
+    <!-- Seção "Entre em Contato" -->
 </body>
 </html>
